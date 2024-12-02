@@ -3,15 +3,14 @@ main
   :- generator(X), selector(X), write(X).
 
 % Convert a list of digits to a number
-number(XS, N)
-  :- reverse(XS, YS),
-     number_loop(YS, N).
+number(XS, N) 
+  :- number_loop(XS, 0, N).
 
-number_loop([X], X).
-number_loop([X|XS], N)
-  :- number_loop(XS, W),
-     N is W*10 + X.
-
+number_loop([], N, N).
+number_loop([X|XS], Y, N) 
+  :- YS is Y*10 + X,
+     number_loop(XS, YS, N).
+     
 % Generate valid partitions of digits
 generator([X, XS]) 
   :- permutation([1,2,3,4,5,6,7,8,9], Digits),
