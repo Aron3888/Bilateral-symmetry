@@ -1,5 +1,5 @@
 % tests the lists of digits correspond to its respective numeric value
-x_warmup3(N5) :- 
+tester(N5) :- 
   x_unit(number([], 0), 0, N1) ,
   x_unit(number([9], 9), N1, N2) ,
   x_unit(number([4 ,7], 47), N2, N3) ,
