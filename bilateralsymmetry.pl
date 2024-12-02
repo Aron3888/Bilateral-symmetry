@@ -1,6 +1,6 @@
 % Main entry point
 main
-  :- generator3(X), selector3(X), write(X).
+  :- generator(X), selector(X), write(X).
 
 % Convert a list of digits to a number
 number(XS, N)
@@ -13,13 +13,13 @@ number_loop([X|XS], N)
      N is W*10 + X.
 
 % Generate valid partitions of digits
-generator3([X, XS]) 
+generator([X, XS]) 
   :- permutation([1,2,3,4,5,6,7,8,9], Digits),
      append(X, XS, Digits),
      X \= [], XS \= [].
 
 % Select partitions meeting criteria
-selector3([M, N]) 
+selector([M, N]) 
   :- number(M, MS),
      number(N, NS),
      Pr is MS*NS,
