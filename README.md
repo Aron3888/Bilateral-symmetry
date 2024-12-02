@@ -7,4 +7,6 @@ I said “Now try to find the smallest such palindromic product starting in 4, w
 The answer given by the newspaper was 40699604.
 
 ## Prolog programming
-I used Prolog language to solve the Bilateral symmetry to print out the answer of 40699604. Initially, this program should print [[1,7,6,9,5,4,8],[2,3]]. After pressing NEXT, it should print [[2,3],[1,7,6,9,5,4,8]]. (Or perhaps these are printed the other way around.) Either way, after pressing NEXT again, it should print nothing more. The correct answer may then be calculated as 23 × 1769548 = 40699604. Three testers in tests file ensure that your code can run correctly.
+I used Prolog language to solve the Bilateral symmetry to print out the answer of 40699604. Initially, this program should print [[1,7,6,9,5,4,8],[2,3]]. After pressing NEXT, it should print [[2,3],[1,7,6,9,5,4,8]]. (Or perhaps these are printed the other way around.) Either way, after pressing NEXT again, it should print nothing more. The correct answer may then be calculated as 23 × 1769548 = 40699604. 
+
+Three testers in tests file ensure that your code can run correctly.
