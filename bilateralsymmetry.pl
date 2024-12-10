@@ -4,12 +4,13 @@ main
 
 % Convert a list of digits to a number
 number(XS, N) 
-  :- number_loop(XS, 0, N).
+  :- reverse(XS, YS),
+     number_loop(YS, N).
 
-number_loop([], N, N).
-number_loop([X|XS], Y, N) 
-  :- YS is Y*10 + X,
-     number_loop(XS, YS, N).
+number_loop([], 0).
+number_loop([X|XS], W) 
+  :- number_loop(XS, V),
+     W is V*10 + X.
      
 % Generate valid partitions of digits
 generator([X, XS]) 
